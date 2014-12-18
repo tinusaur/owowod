@@ -1,0 +1,30 @@
+﻿
+
+
+
+
+==== Projects and Libraries ====
+
+TinyDebugSerial
+https://code.google.com/p/arduino-tiny/source/browse/cores/tiny/
+
+Lightweight Serial Output 
+http://nerdralph.blogspot.ca/2013/12/writing-avr-assembler-code-with-arduino.html
+The Arduino Serial class consumes a lot of resources, and even the tiny cores serial class (TinyDebugSerial) adds overhead to the half duplex software UART code it seems to be based on.  I decided to integrate my implementation of AVR305 with an Arduino sketch.
+Half-duplex: http://nerdralph.blogspot.dk/2014/01/avr-half-duplex-software-uart.html
+Discussion: http://forum.arduino.cc/index.php?topic=207467.0
+
+SoftwareSerial
+TO-DO
+
+TinySoftwareUSART
+Discussion: http://forum.arduino.cc/index.php?topic=255250.0
+Source code: https://github.com/TCWORLD/ATTinyCore/tree/master/UECIDE-Core/hardware/cores/tiny/libraries/TinySoftwareUSART
+
+
+==== References ====
+
+Serial communication with the Tiny's
+http://www.ernstc.dk/arduino/tinycom.html
+
+
