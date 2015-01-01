@@ -1,5 +1,13 @@
 CHANGES
 
+2015-01-01 (nb)
+
+Added new "debugging.h" file with handy debugging definitions. Updated text file, source code and comment reformatting.
+
+- Added new "debugging.h" file with handy debugging definitions.
+- Updated text files.
+- Minor code and comment reformatting.
+
 
 2014-12-18 (nb)
 

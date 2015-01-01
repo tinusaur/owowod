@@ -1,4 +1,6 @@
 /*
+ * The Tinusaur Project
+ *
  * OWOWOD - One Wire / One Way Output for Debugging
  *
  * @created: 2014-11-21
@@ -35,8 +37,8 @@
 
 // ============================================================================
 
-int main(void)
-{
+int main(void) {
+
 	// ---- Initialization ----
 	
 	owowod_init();
