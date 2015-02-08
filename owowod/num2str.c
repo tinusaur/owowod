@@ -1,10 +1,17 @@
 /*
  * NUM2STR - Functions to handle the conversion of numeric vales to strings.
  *
- * @created: 2014-12-18
- * @author: Neven Boyanov
+ * @created	2014-12-18
+ * @author	Neven Boyanov
+ * @version	Last Modified 2015-01-17
  *
- * Source code available at: https://bitbucket.org/tinusaur/owowod
+ * This is part of the Tinusaur/TinyAVRLib project.
+ *
+ * Copyright (c) 2015 Neven Boyanov, Tinusaur Team. All Rights Reserved.
+ * Distributed as open source software under MIT License, see LICENSE.txt file.
+ * Please, as a favour, retain the link http://tinusaur.org to The Tinusaur Project.
+ *
+ * Source code available at: https://bitbucket.org/tinusaur/tinyavrlib
  *
  */
 
@@ -62,12 +69,12 @@ uint8_t usint2decascii(uint16_t num, char* buffer)
 			}
 		}
 		buffer[pos] = digit + '0';	// Convert to ASCII
-		
+
 	}
-	
+
 	// NOTE: The resulting ascii text should not be terminated with '\0' here.
 	//       The provided buffer maybe part of a larger text in both directions.
-	
+
 	return digits;
 }
 

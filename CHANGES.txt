@@ -1,5 +1,17 @@
 CHANGES
 
+2015-02-08 (nb)
+
+Improved testing and demo source code. Added new debugging print macros. Updated external libraries.
+
+- Added new DEBUGGING_NUMDEC, DEBUGGING_ERROR, DEBUGGING_VAR macros.
+- Updated testing code to demonstrate better the library capabilities.
+- Updated copyright info, added license.
+- Updated README and other texts.
+- Source code reformatting, updated and fixed comments.
+- Updated the external NUM2STR library to its latest version.
+
+
 2015-01-01 (nb)
 
 Added new "debugging.h" file with handy debugging definitions. Updated text file, source code and comment reformatting.

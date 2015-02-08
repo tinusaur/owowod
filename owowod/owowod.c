@@ -4,6 +4,12 @@
  * @created: 2014-11-21
  * @author: Neven Boyanov
  *
+ * This is part of the Tinusaur/OWOWOD project.
+ *
+ * Copyright (c) 2015 Neven Boyanov, Tinusaur Team. All Rights Reserved.
+ * Distributed as open source software under MIT License, see LICENSE.txt file.
+ * Please, as a favour, retain the link http://tinusaur.org to The Tinusaur Project.
+ *
  * Source code available at: https://bitbucket.org/tinusaur/owowod
  *
  */
@@ -16,7 +22,7 @@
 
 // ----------------------------------------------------------------------------
 
-// Freq=1KHz, Rate=9600bps - delay = [22,23,24]
+// Freq=1MHz, Rate=9600bps - delay = [22,23,24]
 // IMPORTANT: For other frequencies this parameter must change.
 #define OWOWOD_DELAY	23	// Delay for each bit
 

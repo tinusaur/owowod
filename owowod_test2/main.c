@@ -18,9 +18,7 @@
 
 #define F_CPU 1000000UL
 
-#include <stdlib.h>
-#include <avr/io.h>
-#include <util/delay.h>
+#include <stdint.h>
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //                ATtiny
@@ -38,53 +36,27 @@
 
 // ----------------------------------------------------------------------------
 
+#include <avr/io.h>
+
 #include "../owowod/owowod.h"
+#include "../owowod/debugging.h"
 
 // ============================================================================
 
 int main(void) {
 
 	// ---- Initialization ----
-	owowod_init();
+	DEBUGGING_INIT();
 
-	// ---- Main Loop ----
-	uint8_t num = 0;
-	while (1) {
+	DEBUGGING_STRING("Hello!\n");
 
-		owowod_print_char('A');
-		owowod_print_char('\n');
-		// owowod_print_char(0x55);	// 0x55='U' 0xAA='ª'
-		// owowod_print_char(0xAA);	// 0x55='U' 0xAA='ª'
-		// owowod_print_char('\n');
+	DEBUGGING_NUMDEC(1);
+	DEBUGGING_NUMDECP(2);
 
-		owowod_print_string("Hello!\n");
+	DEBUGGING_VAR("X", 456);
+	DEBUGGING_VAR("Y", 789);
 
-		owowod_print_numdec(1); owowod_print_char('\n');
-		owowod_print_numdecp(2); owowod_print_char('\n');
-
-		owowod_print_string("A="); owowod_print_numdec(123); owowod_print_char('\n');
-		owowod_print_string("B="); owowod_print_numdec(45678); owowod_print_char('\n');
-
-		owowod_print_string("X="); owowod_print_numdecp(1); owowod_print_char('\n');
-		owowod_print_string("Y="); owowod_print_numdecp(23); owowod_print_char('\n');
-		owowod_print_string("Y="); owowod_print_numdecp(45678); owowod_print_char('\n');
-		owowod_print_char('\n');
-
-		owowod_print_numdecp(num);
-		owowod_print_string(": ");
-
-		for (uint8_t i = 0; i < 95; i++) {	// number of iterations: 95, 127, 254
-			owowod_print_char(' ' + i);	// prints character that is after ' ' (space) in the ASCII table.
-			owowod_print_char(' ');
-		}
-		owowod_print_string("\n");
-
-		owowod_print_string("Good-bye.\n");
-
-		owowod_print_string("----------------\n\n");
-		_delay_ms(2000);
-		num++;
-	}
+	DEBUGGING_ERROR(3, "Connect");
 
 	return 0;
 }

@@ -4,9 +4,17 @@
  * @created: 2014-11-21
  * @author: Neven Boyanov
  *
+ * This is part of the Tinusaur/OWOWOD project.
+ *
+ * Copyright (c) 2015 Neven Boyanov, Tinusaur Team. All Rights Reserved.
+ * Distributed as open source software under MIT License, see LICENSE.txt file.
+ * Please, as a favour, retain the link http://tinusaur.org to The Tinusaur Project.
+ *
  * Source code available at: https://bitbucket.org/tinusaur/owowod
  *
  */
+
+// ----------------------------------------------------------------------------
 
 #ifndef OWOWOD_H
 #define OWOWOD_H
@@ -41,3 +49,5 @@ void owowod_print_numdecp(uint16_t);
 // ============================================================================
 
 #endif
+
+// ----------------------------------------------------------------------------
