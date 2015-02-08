@@ -11,3 +11,6 @@ This was developed and test with the following microcontrollers: ATtiny85, ATtin
 
 This was tested to work with following USB-to-Serial chips: PL2303; CH340G.
 
+Project page: http://tinusaur.org/projects/owowod/
+Source code: https://bitbucket.org/tinusaur/owowod
+
