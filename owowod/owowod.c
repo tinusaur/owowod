@@ -59,7 +59,29 @@ void owowod_print_string(char *s) {
 
 // ----------------------------------------------------------------------------
 
-void owowod_print_numdec(uint16_t num) {
+void owowod_print_numdec(int16_t num) {
+	char buffer[USINT2DECASCII_MAX_DIGITS + 2];	// One more byte for the sign.
+	buffer[0] = ' ';   // Init the string.
+	buffer[USINT2DECASCII_MAX_DIGITS + 1] = '\0';   // Terminate the string.
+	uint8_t digits = usint2decascii((num < 0 ? -num : num), buffer + 1);
+	if (num < 0) buffer[digits] = '-';
+	owowod_print_string(buffer + digits + (num < 0 ? 0 : 1));
+}
+
+// ----------------------------------------------------------------------------
+
+void owowod_print_numdecp(int16_t num) {
+	char buffer[USINT2DECASCII_MAX_DIGITS + 2];	// One more byte for the sign.
+	buffer[0] = ' ';   // Init the string.
+	buffer[USINT2DECASCII_MAX_DIGITS + 1] = '\0';   // Terminate the string.
+	uint8_t digits = usint2decascii((num < 0 ? -num : num), buffer + 1);
+	if (num < 0) buffer[digits] = '-';
+	owowod_print_string(buffer);
+}
+
+// ----------------------------------------------------------------------------
+
+void owowod_print_numdecu(uint16_t num) {
 	char buffer[USINT2DECASCII_MAX_DIGITS + 1];
 	buffer[USINT2DECASCII_MAX_DIGITS] = '\0';   // Terminate the string.
 	uint8_t digits = usint2decascii(num, buffer);
@@ -68,7 +90,7 @@ void owowod_print_numdec(uint16_t num) {
 
 // ----------------------------------------------------------------------------
 
-void owowod_print_numdecp(uint16_t num) {
+void owowod_print_numdecup(uint16_t num) {
 	char buffer[USINT2DECASCII_MAX_DIGITS + 1];
 	buffer[USINT2DECASCII_MAX_DIGITS] = '\0';   // Terminate the string.
 	usint2decascii(num, buffer);

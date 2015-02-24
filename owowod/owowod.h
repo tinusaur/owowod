@@ -43,8 +43,10 @@ inline void owowod_init(void) {
 
 void owowod_print_char(char);
 void owowod_print_string(char *);
-void owowod_print_numdec(uint16_t);
-void owowod_print_numdecp(uint16_t);
+void owowod_print_numdec(int16_t);
+void owowod_print_numdecp(int16_t);
+void owowod_print_numdecu(uint16_t);
+void owowod_print_numdecup(uint16_t);
 
 // ============================================================================
 

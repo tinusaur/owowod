@@ -1,5 +1,17 @@
 CHANGES
 
+2015-02-24 (nb)
+
+Implemented handling signed integers. Changed existing functions to handle signed integers by default.
+
+- Changed owowod_print_numdec and owowod_print_numdecp to receive int16_t instead of uint16_t argument. Implemented handling of signed integer numbers.
+- Added new owowod_print_numdecu and owowod_print_numdecup for handling unsigned integer numbers.
+- Changed DEBUGGING_NUMDEC, DEBUGGING_NUMDECP, DEBUGGING_VAR to receive signed numbers.
+- Added new DEBUGGING_NUMDECU, DEBUGGING_NUMDECUP, DEBUGGING_VARU for handling unsigned integer numbers.
+- Updated README file.
+- Updated testing scripts to reflect latest implementations in the library.
+
+
 2015-02-08 (nb)
 
 Improved testing and demo source code. Added new debugging print macros. Updated external libraries.

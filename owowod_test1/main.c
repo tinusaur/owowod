@@ -64,13 +64,31 @@ int main(void) {
 
 		owowod_print_string("A="); owowod_print_numdec(123); owowod_print_char('\n');
 		owowod_print_string("B="); owowod_print_numdec(45678); owowod_print_char('\n');
+		owowod_print_string("A="); owowod_print_numdec(-678); owowod_print_char('\n');
+		owowod_print_string("B="); owowod_print_numdec(-12345); owowod_print_char('\n');
+
+		owowod_print_string("A="); owowod_print_numdecu(123); owowod_print_char('\n');
+		owowod_print_string("B="); owowod_print_numdecu(45678); owowod_print_char('\n');
+		owowod_print_string("A="); owowod_print_numdecu(-678); owowod_print_char('\n');
+		owowod_print_string("B="); owowod_print_numdecu(-12345); owowod_print_char('\n');
 
 		owowod_print_string("X="); owowod_print_numdecp(1); owowod_print_char('\n');
 		owowod_print_string("Y="); owowod_print_numdecp(23); owowod_print_char('\n');
-		owowod_print_string("Y="); owowod_print_numdecp(45678); owowod_print_char('\n');
+		owowod_print_string("Z="); owowod_print_numdecp(45678); owowod_print_char('\n');
+		owowod_print_string("X="); owowod_print_numdecp(-9); owowod_print_char('\n');
+		owowod_print_string("Y="); owowod_print_numdecp(-78); owowod_print_char('\n');
+		owowod_print_string("Z="); owowod_print_numdecp(-23456); owowod_print_char('\n');
+
+		owowod_print_string("X="); owowod_print_numdecup(1); owowod_print_char('\n');
+		owowod_print_string("Y="); owowod_print_numdecup(23); owowod_print_char('\n');
+		owowod_print_string("Z="); owowod_print_numdecup(45678); owowod_print_char('\n');
+		owowod_print_string("X="); owowod_print_numdecup(-9); owowod_print_char('\n');
+		owowod_print_string("Y="); owowod_print_numdecup(-78); owowod_print_char('\n');
+		owowod_print_string("Z="); owowod_print_numdecup(-23456); owowod_print_char('\n');
+
 		owowod_print_char('\n');
 
-		owowod_print_numdecp(num);
+		owowod_print_numdecup(num);
 		owowod_print_string(": ");
 
 		for (uint8_t i = 0; i < 95; i++) {	// number of iterations: 95, 127, 254

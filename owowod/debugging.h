@@ -28,6 +28,8 @@
 #define DEBUGGING_INIT() owowod_init()
 #define DEBUGGING_NUMDEC(num) owowod_print_numdec(num)
 #define DEBUGGING_NUMDECP(num) owowod_print_numdecp(num)
+#define DEBUGGING_NUMDECU(num) owowod_print_numdecu(num)
+#define DEBUGGING_NUMDECUP(num) owowod_print_numdecup(num)
 #define DEBUGGING_STRING(str) owowod_print_string(str)
 
 #define DEBUGGING_ERROR(num, msg) \
@@ -36,6 +38,10 @@
 	owowod_print_string(" "); }
 #define DEBUGGING_VAR(name, val) { owowod_print_string(name); \
 	owowod_print_string("="); owowod_print_numdec(val); \
+	owowod_print_string("; "); }
+
+#define DEBUGGING_VARU(name, val) { owowod_print_string(name); \
+	owowod_print_string("="); owowod_print_numdecu(val); \
 	owowod_print_string("; "); }
 
 // ============================================================================
