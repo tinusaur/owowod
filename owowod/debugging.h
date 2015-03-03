@@ -31,11 +31,13 @@
 #define DEBUGGING_NUMDECU(num) owowod_print_numdecu(num)
 #define DEBUGGING_NUMDECUP(num) owowod_print_numdecup(num)
 #define DEBUGGING_STRING(str) owowod_print_string(str)
+#define DEBUGGING_STRINGLN(str) { owowod_print_string(str); DEBUGGING_CRLF(); }
+#define DEBUGGING_CRLF() owowod_print_string("\r\n")
 
 #define DEBUGGING_ERROR(num, msg) \
 	{ owowod_print_string("err["); owowod_print_numdec(num); \
 	owowod_print_string("]:"); owowod_print_string(msg); \
-	owowod_print_string(" "); }
+	DEBUGGING_CRLF(); }
 #define DEBUGGING_VAR(name, val) { owowod_print_string(name); \
 	owowod_print_string("="); owowod_print_numdec(val); \
 	owowod_print_string("; "); }

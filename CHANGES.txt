@@ -1,5 +1,11 @@
 CHANGES
 
+
+2015-03-03 (nb)
+
+Updated README, added licensing. Fixed some includes. Added new DEBUGGING_CRLF, DEBUGGING_STRINGLN functions.
+
+
 2015-02-24 (nb)
 
 Implemented handling signed integers. Changed existing functions to handle signed integers by default.
