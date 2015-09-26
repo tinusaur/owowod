@@ -1,6 +1,15 @@
 CHANGES
 
 
+2015-09-26 (nb)
+
+Improved owowod_print_char: disabled interrupts while printing char. Added new DEBUGGING_CHAR function.
+
+- Improved owowod_print_char: disabled interrupts while printing char.
+- Added more info about working with higher BPS.
+- Added new convenience DEBUGGING_CHAR function.
+
+
 2015-03-03 (nb)
 
 Updated README, added licensing. Fixed some includes. Added new DEBUGGING_CRLF, DEBUGGING_STRINGLN functions.

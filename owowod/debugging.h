@@ -30,6 +30,7 @@
 #define DEBUGGING_NUMDECP(num) owowod_print_numdecp(num)
 #define DEBUGGING_NUMDECU(num) owowod_print_numdecu(num)
 #define DEBUGGING_NUMDECUP(num) owowod_print_numdecup(num)
+#define DEBUGGING_CHAR(chr) owowod_print_char(chr)
 #define DEBUGGING_STRING(str) owowod_print_string(str)
 #define DEBUGGING_STRINGLN(str) { owowod_print_string(str); DEBUGGING_CRLF(); }
 #define DEBUGGING_CRLF() owowod_print_string("\r\n")

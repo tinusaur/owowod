@@ -18,10 +18,17 @@
 
 #include "owowod.h"
 
+#include <avr/interrupt.h>
+
 // ----------------------------------------------------------------------------
 
-// Freq=1MHz, Rate=9600bps - delay = [22,23,24]
-// IMPORTANT: For other frequencies this parameter must change.
+// Freq=1MHz, Rate=4800bps   - delay = [47,48,49,50,51,52,53]
+// Freq=1MHz, Rate=9600bps   - delay = [22,23,24]
+// Freq=1MHz, Rate=14400bps  - delay = [14,15,16]
+// Freq=1MHz, Rate=19200bps  - delay = [10,11]
+// Freq=1MHz, Rate=56000bps  - delay = [6]
+// Freq=1MHz, Rate=57600bps  - delay = [6]
+// IMPORTANT: For each frequency this parameter must change.
 #define OWOWOD_DELAY	23	// Delay for each bit
 
 inline void owowod_delay(void) {
@@ -33,6 +40,9 @@ inline void owowod_delay(void) {
 // ----------------------------------------------------------------------------
 
 void owowod_print_char(char c) {
+	cli(); // disable interrupts
+	// TODO: make it optional, use define.
+
 	PORTB &= ~(1 << OWOWOD_PORT);	// Set to LO
 	owowod_delay();
 	for (uint8_t i = 0; i < 8; i++)
@@ -47,6 +57,9 @@ void owowod_print_char(char c) {
 	}
 	PORTB |= (1 << OWOWOD_PORT);	// Set to HI
 	owowod_delay();
+
+    sei(); // enable interrupts
+	// TODO: make it optional, use define.
 }
 
 void owowod_print_string(char *s) {
