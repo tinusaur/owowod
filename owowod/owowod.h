@@ -8,18 +8,18 @@
  *
  * Copyright (c) 2015 Neven Boyanov, Tinusaur Team. All Rights Reserved.
  * Distributed as open source software under MIT License, see LICENSE.txt file.
- * Please, as a favour, retain the link http://tinusaur.org to The Tinusaur Project.
+ * Please, as a favor, retain the link http://tinusaur.org to The Tinusaur Project.
  *
  * Source code available at: https://bitbucket.org/tinusaur/owowod
  *
  */
 
-// ----------------------------------------------------------------------------
+// ============================================================================
 
 #ifndef OWOWOD_H
 #define OWOWOD_H
 
-// ============================================================================
+// ----------------------------------------------------------------------------
 
 #include <stdint.h>
 #include <avr/io.h>
@@ -38,6 +38,7 @@ inline void owowod_init(void) {
 	DDRB |= (1 << OWOWOD_PORT);		// Set port as output
 	PORTB |= (1 << OWOWOD_PORT);	// Set to HI
 	// NOTE: Level HI is the default when the serial is inactive
+	// TODO: Adjust OWOWOD_DELAY during init. Necessary for some USB-to-Serial adapters.
 }
 
 // ----------------------------------------------------------------------------
@@ -49,8 +50,15 @@ void owowod_print_numdecp(int16_t);
 void owowod_print_numdecu(uint16_t);
 void owowod_print_numdecup(uint16_t);
 
-// ============================================================================
+// ----------------------------------------------------------------------------
+
+void owowod_print_numbinu(uint8_t);
+void owowod_print_numbinupz(uint8_t);
+void owowod_print_numbinuw(uint16_t);
+void owowod_print_numbinuwpz(uint16_t);
+
+// ----------------------------------------------------------------------------
 
 #endif
 
-// ----------------------------------------------------------------------------
+// ============================================================================

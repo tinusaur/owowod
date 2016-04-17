@@ -8,18 +8,18 @@
  *
  * Copyright (c) 2015 Neven Boyanov, Tinusaur Team. All Rights Reserved.
  * Distributed as open source software under MIT License, see LICENSE.txt file.
- * Please, as a favour, retain the link http://tinusaur.org to The Tinusaur Project.
+ * Please, as a favor, retain the link http://tinusaur.org to The Tinusaur Project.
  *
  * Source code available at: https://bitbucket.org/tinusaur/owowod
  *
  */
 
-// ----------------------------------------------------------------------------
+// ============================================================================
 
 #ifndef DEBUGGING_H
 #define DEBUGGING_H
 
-// ============================================================================
+// ----------------------------------------------------------------------------
 
 #include "owowod.h"
 
@@ -39,6 +39,7 @@
 	{ owowod_print_string("err["); owowod_print_numdec(num); \
 	owowod_print_string("]:"); owowod_print_string(msg); \
 	DEBUGGING_CRLF(); }
+
 #define DEBUGGING_VAR(name, val) { owowod_print_string(name); \
 	owowod_print_string("="); owowod_print_numdec(val); \
 	owowod_print_string("; "); }
@@ -47,8 +48,13 @@
 	owowod_print_string("="); owowod_print_numdecu(val); \
 	owowod_print_string("; "); }
 
-// ============================================================================
+#define DEBUGGING_NUMBINU(num) owowod_print_numbinu(num)
+#define DEBUGGING_NUMBINUPZ(num) owowod_print_numbinupz(num)
+#define DEBUGGING_NUMBINUW(num) owowod_print_numbinuw(num)
+#define DEBUGGING_NUMBINUWPZ(num) owowod_print_numbinuwpz(num)
+
+// ----------------------------------------------------------------------------
 
 #endif
 
-// ----------------------------------------------------------------------------
+// ============================================================================

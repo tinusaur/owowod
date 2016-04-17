@@ -8,7 +8,7 @@
  *
  * Copyright (c) 2015 Neven Boyanov, Tinusaur Team. All Rights Reserved.
  * Distributed as open source software under MIT License, see LICENSE.txt file.
- * Please, as a favour, retain the link http://tinusaur.org to The Tinusaur Project.
+ * Please, as a favor, retain the link http://tinusaur.org to The Tinusaur Project.
  *
  * Source code available at: https://bitbucket.org/tinusaur/owowod
  *
@@ -23,13 +23,13 @@
 // ----------------------------------------------------------------------------
 
 // Freq=1MHz, Rate=4800bps   - delay = [47,48,49,50,51,52,53]
-// Freq=1MHz, Rate=9600bps   - delay = [22,23,24]
+// Freq=1MHz, Rate=9600bps   - delay = [22,23,24,25]
 // Freq=1MHz, Rate=14400bps  - delay = [14,15,16]
 // Freq=1MHz, Rate=19200bps  - delay = [10,11]
 // Freq=1MHz, Rate=56000bps  - delay = [6]
 // Freq=1MHz, Rate=57600bps  - delay = [6]
-// IMPORTANT: For each frequency this parameter must change.
-#define OWOWOD_DELAY	23	// Delay for each bit
+// IMPORTANT: For each CPU frequency this parameter must change.
+#define OWOWOD_DELAY	25	// Delay for each bit
 
 inline void owowod_delay(void) {
 	for (uint8_t i = OWOWOD_DELAY; i != 0; i--) {
@@ -105,6 +105,42 @@ void owowod_print_numdecup(uint16_t num) {
 	char buffer[USINT2DECASCII_MAX_DIGITS + 1];
 	buffer[USINT2DECASCII_MAX_DIGITS] = '\0';   // Terminate the string.
 	usint2decascii(num, buffer);
+	owowod_print_string(buffer);
+}
+
+// ============================================================================
+
+void owowod_print_numbinu(uint8_t num) {
+	char buffer[USINT2BINASCII_MAX_DIGITS + 1];
+	buffer[USINT2BINASCII_MAX_DIGITS] = '\0';   // Terminate the string.
+	uint8_t digits = usint2binascii(num, buffer);
+	owowod_print_string(buffer + digits);
+}
+
+// ----------------------------------------------------------------------------
+
+void owowod_print_numbinupz(uint8_t num) {
+	char buffer[USINT2BINASCII_MAX_DIGITS + 1];
+	buffer[USINT2BINASCII_MAX_DIGITS] = '\0';   // Terminate the string.
+	usint2binascii(num, buffer);
+	owowod_print_string(buffer + USINT2BINASCII_MAX_DIGITS / 2);
+}
+
+// ----------------------------------------------------------------------------
+
+void owowod_print_numbinuw(uint16_t num) {
+	char buffer[USINT2BINASCII_MAX_DIGITS + 1];
+	buffer[USINT2BINASCII_MAX_DIGITS] = '\0';   // Terminate the string.
+	uint8_t digits = usint2binascii(num, buffer);
+	owowod_print_string(buffer + digits);
+}
+
+// ----------------------------------------------------------------------------
+
+void owowod_print_numbinuwpz(uint16_t num) {
+	char buffer[USINT2BINASCII_MAX_DIGITS + 1];
+	buffer[USINT2BINASCII_MAX_DIGITS] = '\0';   // Terminate the string.
+	usint2binascii(num, buffer);
 	owowod_print_string(buffer);
 }
 

@@ -1,6 +1,19 @@
 CHANGES
 
 
+2016-04-17 (nb)
+
+Added support for binary numbers. New SerOut module. Fixed building and texts.
+
+- Implemented, as part of the TinyAVRLib, new usint2binascii function to convert numbers to binary ASCII strings.
+- Added owowod_print_numbinu, owowod_print_numbinupz, owowod_print_numbinuw, owowod_print_numbinuwpz functions to work with binary number.
+- Added to "debugging" module support for binary numbers.
+- Added "serout" serial output module.
+- Edited, improved README file. Fixed typos in other files.
+- Updated OWOWOD_DELAY value.
+- Fixed Makefile files to work with the latest AVR-GCC SDKs.
+
+
 2015-09-26 (nb)
 
 Improved owowod_print_char: disabled interrupts while printing char. Added new DEBUGGING_CHAR function.

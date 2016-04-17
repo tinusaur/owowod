@@ -3,7 +3,7 @@ OWOWOD - One Wire / One Way Output for Debugging
 -----------------------------------------------------------------------------------
  Copyright (c) 2015 Neven Boyanov, Tinusaur Team. All Rights Reserved.
  Distributed as open source software under MIT License, see LICENSE.txt file.
- Please, as a favour, retain the link http://tinusaur.org to The Tinusaur Project.
+ Please, as a favor, retain the link http://tinusaur.org to The Tinusaur Project.
 -----------------------------------------------------------------------------------
 
 This is a small library that allows you to create one-wire, one-way debugging/printing connection from ATtiny85 to another device, such as computer, using serial protocol.
@@ -12,6 +12,12 @@ One example would be printing debugging information from a microcontroller to a 
 - The library will output the debugging text using just one wire, let's say through PB3 pin.
 - Using USB-to-Serial (TTL) converter that goes to the computer as if it comes from a COM port.
 - Using COM port monitoring program or terminal will show the debugging text on the screen of the computer.
+
+Folders and sub-projects:
+- owowod            - The library source code
+- owowod_test1      - Testing scripts for the library
+- owowod_test2      - Testing scripts for the "debugging" functions.
+- owowod_test3      - Testing scripts for the "serout" functions.
 
 This was developed with and tested on the following microcontrollers: ATtiny85, ATtiny45, ATtiny25.
 
