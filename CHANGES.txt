@@ -5,6 +5,10 @@ CHANGES
 
 Replaced while with for loop.
 
+The owowod_delay settable at run-time, default 1MHz/9600bps. Pre-defined constants for 1-8MHz and various bps's.
+
+Text changes, minor.
+
 
 2016-04-17 (nb)
 

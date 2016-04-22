@@ -3,7 +3,7 @@
  *
  * @created	2014-12-18
  * @author	Neven Boyanov
- * @version	Last Modified 2016-04-17
+ * @version	2016-04-17 (last modified)
  *
  * This is part of the Tinusaur/TinyAVRLib project.
  *
