@@ -49,7 +49,7 @@ int main(void) {
 
 	// ---- Main Loop ----
 	uint8_t num = 0;
-	while (1) {
+	for (;;) {
 
 		owowod_print_char('A');
 		owowod_print_char('\n');

@@ -1,6 +1,11 @@
 CHANGES
 
 
+2016-04-22 (nb)
+
+Replaced while with for loop.
+
+
 2016-04-17 (nb)
 
 Added support for binary numbers. New SerOut module. Fixed building and texts.
