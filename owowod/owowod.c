@@ -22,17 +22,16 @@
 
 // ----------------------------------------------------------------------------
 
-// Freq=1MHz, Rate=4800bps   - delay = [47,48,49,50,51,52,53]
-// Freq=1MHz, Rate=9600bps   - delay = [22,23,24,25]
-// Freq=1MHz, Rate=14400bps  - delay = [14,15,16]
-// Freq=1MHz, Rate=19200bps  - delay = [10,11]
-// Freq=1MHz, Rate=56000bps  - delay = [6]
-// Freq=1MHz, Rate=57600bps  - delay = [6]
-// IMPORTANT: For each CPU frequency this parameter must change.
-#define OWOWOD_DELAY	25	// Delay for each bit
+#define OWOWOD_DELAY_DEFAULT OWOWOD_DELAY_FCPU1MHZ_009600BPS	// Delay for each bit
+
+// ----------------------------------------------------------------------------
+
+uint8_t owowod_delay_val = OWOWOD_DELAY_DEFAULT;
+
+// ----------------------------------------------------------------------------
 
 inline void owowod_delay(void) {
-	for (uint8_t i = OWOWOD_DELAY; i != 0; i--) {
+	for (uint8_t i = owowod_delay_val; i != 0; i--) {
 		asm volatile ("nop\n\t");
 	}
 }

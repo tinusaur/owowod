@@ -34,12 +34,32 @@
 
 // ----------------------------------------------------------------------------
 
+#define OWOWOD_DELAY_FCPU1MHZ_004800BPS	31	// 31-34:OK, 35:Errors
+#define OWOWOD_DELAY_FCPU1MHZ_009600BPS	15	// 15:OK, 16:Errors
+#define OWOWOD_DELAY_FCPU1MHZ_019200BPS	6	// Errors
+#define OWOWOD_DELAY_FCPU1MHZ_038400BPS	2	// OK
+#define OWOWOD_DELAY_FCPU1MHZ_057600BPS	0	// Failure
+
+#define OWOWOD_DELAY_FCPU8MHZ_009600BPS	132	// 132-143: OK, 144-145: Errors
+#define OWOWOD_DELAY_FCPU8MHZ_019200BPS	65	// 65-70: OK
+#define OWOWOD_DELAY_FCPU8MHZ_038400BPS	32	// 32-34: OK
+#define OWOWOD_DELAY_FCPU8MHZ_057600BPS	20	// 20-22: OK
+#define OWOWOD_DELAY_FCPU8MHZ_115200BPS	9	// 9: OK
+
+// ----------------------------------------------------------------------------
+
+uint8_t owowod_delay_val;
+
+// ----------------------------------------------------------------------------
+
 inline void owowod_init(void) {
 	DDRB |= (1 << OWOWOD_PORT);		// Set port as output
 	PORTB |= (1 << OWOWOD_PORT);	// Set to HI
 	// NOTE: Level HI is the default when the serial is inactive
 	// TODO: Adjust OWOWOD_DELAY during init. Necessary for some USB-to-Serial adapters.
 }
+
+inline void owowod_delay_set(uint8_t);inline void owowod_delay_set(uint8_t val) { owowod_delay_val = val; }
 
 // ----------------------------------------------------------------------------
 
