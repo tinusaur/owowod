@@ -1,6 +1,11 @@
 CHANGES
 
 
+2016-04-29 (nb)
+
+Updated texts, fixed typos. Other small changes.
+
+
 2016-04-22 (nb)
 
 Replaced while with for loop.

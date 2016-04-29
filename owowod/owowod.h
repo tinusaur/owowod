@@ -1,4 +1,4 @@
-/*
+/**
  * OWOWOD - One Wire / One Way Output for Debugging
  *
  * @created: 2014-11-21
@@ -6,7 +6,7 @@
  *
  * This is part of the Tinusaur/OWOWOD project.
  *
- * Copyright (c) 2015 Neven Boyanov, Tinusaur Team. All Rights Reserved.
+ * Copyright (c) 2016 Neven Boyanov, Tinusaur Team. All Rights Reserved.
  * Distributed as open source software under MIT License, see LICENSE.txt file.
  * Please, as a favor, retain the link http://tinusaur.org to The Tinusaur Project.
  *
@@ -56,7 +56,7 @@ inline void owowod_init(void) {
 	DDRB |= (1 << OWOWOD_PORT);		// Set port as output
 	PORTB |= (1 << OWOWOD_PORT);	// Set to HI
 	// NOTE: Level HI is the default when the serial is inactive
-	// TODO: Adjust OWOWOD_DELAY during init. Necessary for some USB-to-Serial adapters.
+	// TODO: Adjust owowod_bitlen_val during init. Necessary for some USB-to-Serial adapters.
 }
 
 inline void owowod_delay_set(uint8_t);inline void owowod_delay_set(uint8_t val) { owowod_delay_val = val; }
@@ -77,8 +77,6 @@ void owowod_print_numbinupz(uint8_t);
 void owowod_print_numbinuw(uint16_t);
 void owowod_print_numbinuwpz(uint16_t);
 
-// ----------------------------------------------------------------------------
+// ============================================================================
 
 #endif
-
-// ============================================================================
