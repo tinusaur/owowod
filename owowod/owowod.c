@@ -22,16 +22,20 @@
 
 // ----------------------------------------------------------------------------
 
-#define OWOWOD_DELAY_DEFAULT OWOWOD_DELAY_FCPU1MHZ_009600BPS	// Delay for each bit
+#define OWOWOD_BITLEN_DEFAULT OWOWOD_BITLEN_FCPU1MHZ_009600BPS	// Delay for each bit
 
 // ----------------------------------------------------------------------------
 
-uint8_t owowod_delay_val = OWOWOD_DELAY_DEFAULT;
+uint8_t owowod_bitlen_val = OWOWOD_BITLEN_DEFAULT;
+
+inline void owowod_bitlen_set(uint8_t val) { owowod_bitlen_val = val; }
+
+inline void owowod_reinit(uint8_t delay_val) { owowod_bitlen_set(delay_val); }
 
 // ----------------------------------------------------------------------------
 
 inline void owowod_delay(void) {
-	for (uint8_t i = owowod_delay_val; i != 0; i--) {
+	for (uint8_t i = owowod_bitlen_val; i != 0; i--) {
 		asm volatile ("nop\n\t");
 	}
 }

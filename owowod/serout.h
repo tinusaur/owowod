@@ -26,6 +26,7 @@
 // ----------------------------------------------------------------------------
 
 #define SEROUT_INIT() owowod_init()
+#define SEROUT_REINIT(delay_val) owowod_reinit(delay_val)
 #define SEROUT_CHAR(chr) owowod_print_char(chr)
 #define SEROUT_STRING(str) owowod_print_string(str)
 #define SEROUT_STRINGLN(str) { owowod_print_string(str); SEROUT_CRLF(); }

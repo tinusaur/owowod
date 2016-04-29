@@ -26,6 +26,7 @@
 // ----------------------------------------------------------------------------
 
 #define DEBUGGING_INIT() owowod_init()
+#define DEBUGGING_REINIT(delay_val) owowod_reinit(delay_val)
 #define DEBUGGING_NUMDEC(num) owowod_print_numdec(num)
 #define DEBUGGING_NUMDECP(num) owowod_print_numdecp(num)
 #define DEBUGGING_NUMDECU(num) owowod_print_numdecu(num)

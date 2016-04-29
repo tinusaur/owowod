@@ -34,21 +34,17 @@
 
 // ----------------------------------------------------------------------------
 
-#define OWOWOD_DELAY_FCPU1MHZ_004800BPS	31	// 31-34:OK, 35:Errors
-#define OWOWOD_DELAY_FCPU1MHZ_009600BPS	15	// 15:OK, 16:Errors
-#define OWOWOD_DELAY_FCPU1MHZ_019200BPS	6	// Errors
-#define OWOWOD_DELAY_FCPU1MHZ_038400BPS	2	// OK
-#define OWOWOD_DELAY_FCPU1MHZ_057600BPS	0	// Failure
+#define OWOWOD_BITLEN_FCPU1MHZ_004800BPS	32	// 31-34:OK, 35:Errors
+#define OWOWOD_BITLEN_FCPU1MHZ_009600BPS	15	// 15:OK, 16:Errors
+#define OWOWOD_BITLEN_FCPU1MHZ_019200BPS	6	// Errors
+#define OWOWOD_BITLEN_FCPU1MHZ_038400BPS	2	// OK
+#define OWOWOD_BITLEN_FCPU1MHZ_057600BPS	0	// Failure
 
-#define OWOWOD_DELAY_FCPU8MHZ_009600BPS	132	// 132-143: OK, 144-145: Errors
-#define OWOWOD_DELAY_FCPU8MHZ_019200BPS	65	// 65-70: OK
-#define OWOWOD_DELAY_FCPU8MHZ_038400BPS	32	// 32-34: OK
-#define OWOWOD_DELAY_FCPU8MHZ_057600BPS	20	// 20-22: OK
-#define OWOWOD_DELAY_FCPU8MHZ_115200BPS	9	// 9: OK
-
-// ----------------------------------------------------------------------------
-
-uint8_t owowod_delay_val;
+#define OWOWOD_BITLEN_FCPU8MHZ_009600BPS	136	// 132-143: OK, 144-145: Errors
+#define OWOWOD_BITLEN_FCPU8MHZ_019200BPS	67	// 65-70: OK
+#define OWOWOD_BITLEN_FCPU8MHZ_038400BPS	33	// 32-34: OK
+#define OWOWOD_BITLEN_FCPU8MHZ_057600BPS	21	// 20-22: OK
+#define OWOWOD_BITLEN_FCPU8MHZ_115200BPS	9	// 9: OK
 
 // ----------------------------------------------------------------------------
 
@@ -59,7 +55,7 @@ inline void owowod_init(void) {
 	// TODO: Adjust owowod_bitlen_val during init. Necessary for some USB-to-Serial adapters.
 }
 
-inline void owowod_delay_set(uint8_t);inline void owowod_delay_set(uint8_t val) { owowod_delay_val = val; }
+void owowod_reinit(uint8_t);
 
 // ----------------------------------------------------------------------------
 

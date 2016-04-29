@@ -3,6 +3,15 @@ CHANGES
 
 2016-04-29 (nb)
 
+Added new DEBUGGING_REINIT, SEROUT_REINIT functions. Renamed owowod_delay_set function to owowod_reinit. Renamed OWOWOD_DELAY_* to OWOWOD_BITLEN_*.
+
+- Added new DEBUGGING_REINIT, SEROUT_REINIT functions/macros.
+- Renamed owowod_delay_set function to owowod_reinit.
+- Renamed OWOWOD_DELAY_* to OWOWOD_BITLEN_*.
+
+
+2016-04-29 (nb)
+
 Updated texts, fixed typos. Other small changes.
 
 
