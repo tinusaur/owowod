@@ -13,6 +13,8 @@ One example would be printing debugging information from a microcontroller to a 
 - Using USB-to-Serial (TTL) converter that goes to the computer as if it comes from a COM port.
 - Using COM port monitoring program or terminal will show the debugging text on the screen of the computer.
 
+This library has support for and tested work with the 8 MHz CPU clock mode.
+
 Folders and sub-projects:
 - owowod            - The library source code
 - owowod_test1      - Testing scripts for the library
