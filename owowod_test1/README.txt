@@ -1,11 +1,17 @@
 OWOWOD - One Wire / One Way Output for Debugging
 
-This is a test ptoject.
+This is a testing project.
 
-To make, execute:
-	$ make
+To build the project, type:
+   $ make
 
-To upload, execute:
+To program the binary into the microcontroller, type:
+   $ make program
+
+Alternatively, to program the binary, type:
 	$ avrdude -c usbasp -p t85 -U flash:w:"main.hex":a
+
+To clean up files left out from previous builds, type:
+   $ make clean
 
 

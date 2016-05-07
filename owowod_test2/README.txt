@@ -1,6 +1,6 @@
 OWOWOD - One Wire / One Way Output for Debugging
 
-This is a test ptoject.
+This is a test project.
 
 To make, execute:
 	$ make

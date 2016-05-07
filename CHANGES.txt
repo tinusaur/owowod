@@ -3,6 +3,11 @@ CHANGES
 
 2016-05-07 (nb)
 
+Improved testing scripts. Updated text files.
+
+
+2016-05-07 (nb)
+
 Improved the Makefile building script file for testing modules.
 
 
