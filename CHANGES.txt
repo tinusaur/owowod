@@ -3,6 +3,11 @@ CHANGES
 
 2016-05-07 (nb)
 
+Improved the Makefile building script file for testing modules.
+
+
+2016-05-07 (nb)
+
 Source code reformatting; remove used num2str files; updated text, comments.
 
 - Source code reformatting.
