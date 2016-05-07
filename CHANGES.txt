@@ -3,6 +3,15 @@ CHANGES
 
 2016-05-07 (nb)
 
+Source code reformatting; remove used num2str files; updated text, comments.
+
+- Source code reformatting.
+- Remove used num2str files.
+- Updated text, comments.
+
+
+2016-05-07 (nb)
+
 Added new DEBUGGING_VARBINUPZ, DEBUGGING_VARBINUWPZ functions.
 
 

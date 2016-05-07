@@ -1,8 +1,8 @@
 /**
  * OWOWOD - One Wire / One Way Output for Debugging
  *
- * @created: 2015-01-01
- * @author: Neven Boyanov
+ * @created 2015-01-01
+ * @author Neven Boyanov
  *
  * This is part of the Tinusaur/OWOWOD project.
  *
@@ -14,12 +14,12 @@
  *
  */
 
-// ============================================================================
+// ----------------------------------------------------------------------------
 
 #ifndef DEBUGGING_H
 #define DEBUGGING_H
 
-// ----------------------------------------------------------------------------
+// ============================================================================
 
 #include "owowod.h"
 
@@ -27,17 +27,19 @@
 
 #define DEBUGGING_INIT() owowod_init()
 #define DEBUGGING_REINIT(delay_val) owowod_reinit(delay_val)
-#define DEBUGGING_NUMDEC(num) owowod_print_numdec(num)
-#define DEBUGGING_NUMDECP(num) owowod_print_numdecp(num)
-#define DEBUGGING_NUMDECU(num) owowod_print_numdecu(num)
-#define DEBUGGING_NUMDECUP(num) owowod_print_numdecup(num)
+
 #define DEBUGGING_CHAR(chr) owowod_print_char(chr)
 #define DEBUGGING_STRING(str) owowod_print_string(str)
 #define DEBUGGING_STRINGLN(str) { owowod_print_string(str); DEBUGGING_CRLF(); }
 #define DEBUGGING_CRLF() owowod_print_string("\r\n")
 
+#define DEBUGGING_NUMDEC(num) owowod_print_numdec(num)
+#define DEBUGGING_NUMDECP(num) owowod_print_numdecp(num)
+#define DEBUGGING_NUMDECU(num) owowod_print_numdecu(num)
+#define DEBUGGING_NUMDECUP(num) owowod_print_numdecup(num)
+
 #define DEBUGGING_ERROR(num, msg) \
-	{ owowod_print_string("err["); owowod_print_numdec(num); \
+	{ owowod_print_string("ERR["); owowod_print_numdec(num); \
 	owowod_print_string("]:"); owowod_print_string(msg); \
 	DEBUGGING_CRLF(); }
 

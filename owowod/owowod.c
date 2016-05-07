@@ -1,8 +1,8 @@
 /**
  * OWOWOD - One Wire / One Way Output for Debugging
  *
- * @created: 2014-11-21
- * @author: Neven Boyanov
+ * @created 2014-11-21
+ * @author Neven Boyanov
  *
  * This is part of the Tinusaur/OWOWOD project.
  *

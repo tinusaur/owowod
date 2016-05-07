@@ -20,6 +20,7 @@ Folders and sub-projects:
 - owowod_test1      - Testing scripts for the library
 - owowod_test2      - Testing scripts for the "debugging" functions.
 - owowod_test3      - Testing scripts for the "serout" functions.
+- owowod_test4      - Testing scripts for different CPU frequencies and baud rates.
 
 This was developed with and tested on the following microcontrollers: ATtiny85, ATtiny45, ATtiny25.
 
