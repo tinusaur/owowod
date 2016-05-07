@@ -54,6 +54,14 @@
 #define DEBUGGING_NUMBINUW(num) owowod_print_numbinuw(num)
 #define DEBUGGING_NUMBINUWPZ(num) owowod_print_numbinuwpz(num)
 
+#define DEBUGGING_VARBINUPZ(name, val) { owowod_print_string(name); \
+	owowod_print_string("="); owowod_print_numbinupz(val); \
+	owowod_print_string("; "); }
+
+#define DEBUGGING_VARBINUWPZ(name, val) { owowod_print_string(name); \
+	owowod_print_string("="); owowod_print_numbinuwpz(val); \
+	owowod_print_string("; "); }
+
 // ============================================================================
 
 #endif

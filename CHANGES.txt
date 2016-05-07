@@ -1,6 +1,11 @@
 CHANGES
 
 
+2016-05-07 (nb)
+
+Added new DEBUGGING_VARBINUPZ, DEBUGGING_VARBINUWPZ functions.
+
+
 2016-04-29 (nb)
 
 Added new DEBUGGING_REINIT, SEROUT_REINIT functions. Renamed owowod_delay_set function to owowod_reinit. Renamed OWOWOD_DELAY_* to OWOWOD_BITLEN_*.
