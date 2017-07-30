@@ -61,7 +61,7 @@ void owowod_print_char(char c) {
 	PORTB |= (1 << OWOWOD_PORT);	// Set to HI
 	owowod_delay();
 
-    sei(); // enable interrupts
+	sei(); // enable interrupts
 	// TODO: make it optional, use define.
 }
 
