@@ -1,6 +1,11 @@
 CHANGES
 
 
+2018-07-17 (nb)
+
+Function owowod_delay renamed to owowod_bit_delay. Updated texts.
+
+
 2016-07-30 (nb)
 
 Updated some texts.

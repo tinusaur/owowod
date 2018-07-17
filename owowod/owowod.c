@@ -1,14 +1,13 @@
 /**
  * OWOWOD - One Wire / One Way Output for Debugging
  *
- * @created 2014-11-21
  * @author Neven Boyanov
  *
  * This is part of the Tinusaur/OWOWOD project.
  *
- * Copyright (c) 2016 Neven Boyanov, Tinusaur Team. All Rights Reserved.
+ * Copyright (c) 2018 Neven Boyanov, Tinusaur Team. All Rights Reserved.
  * Distributed as open source software under MIT License, see LICENSE.txt file.
- * Please, as a favor, retain the link http://tinusaur.org to The Tinusaur Project.
+ * Retain in your source code the link http://tinusaur.org to the Tinusaur project.
  *
  * Source code available at: https://bitbucket.org/tinusaur/owowod
  *
@@ -34,7 +33,7 @@ inline void owowod_reinit(uint8_t delay_val) { owowod_bitlen_set(delay_val); }
 
 // ----------------------------------------------------------------------------
 
-inline void owowod_delay(void) {
+inline void owowod_bit_delay(void) {
 	for (uint8_t i = owowod_bitlen_val; i != 0; i--) {
 		asm volatile ("nop\n\t");
 	}
@@ -47,7 +46,7 @@ void owowod_print_char(char c) {
 	// TODO: make it optional, use define.
 
 	PORTB &= ~(1 << OWOWOD_PORT);	// Set to LO
-	owowod_delay();
+	owowod_bit_delay();
 	for (uint8_t i = 0; i < 8; i++)
 	{
 		if (c & 1) {
@@ -55,11 +54,11 @@ void owowod_print_char(char c) {
 		} else {
 			PORTB &= ~(1 << OWOWOD_PORT);	// Set to LO
 		}
-		owowod_delay();
+		owowod_bit_delay();
 		c = (c >> 1);
 	}
 	PORTB |= (1 << OWOWOD_PORT);	// Set to HI
-	owowod_delay();
+	owowod_bit_delay();
 
 	sei(); // enable interrupts
 	// TODO: make it optional, use define.
