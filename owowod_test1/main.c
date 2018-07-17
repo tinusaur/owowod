@@ -1,14 +1,13 @@
 /**
  * OWOWOD - One Wire / One Way Output for Debugging
  *
- * @created 2014-11-21
  * @author Neven Boyanov
  *
  * This is part of the Tinusaur/OWOWOD project.
  *
- * Copyright (c) 2016 Neven Boyanov, Tinusaur Team. All Rights Reserved.
+ * Copyright (c) 2018 Neven Boyanov, Tinusaur Team. All Rights Reserved.
  * Distributed as open source software under MIT License, see LICENSE.txt file.
- * Please, as a favor, retain the link http://tinusaur.org to The Tinusaur Project.
+ * PRetain in your source code the link http://tinusaur.org to the Tinusaur project.
  *
  * Source code available at: https://bitbucket.org/tinusaur/owowod
  *
@@ -31,8 +30,8 @@
 
 //
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//                ATtiny
-//               25/45/85
+//                 ATtiny
+//                25/45/85
 //              +----------+
 //      (RST)---+ PB5  Vcc +---(+)-------
 // --[OWOWOD]---+ PB3  PB2 +---
@@ -88,7 +87,7 @@ int main(void) {
 		owowod_print_numdecu(num);
 		owowod_print_string(":\r\n");
 
-		for (uint8_t i = 0; i < 255 - 32; i++) {	// number of iterations: 95, 127, 254
+		for (uint8_t i = 0; i <= 255 - 32; i++) {	// number of iterations: 95, 127, 254
 			owowod_print_char(' ' + i);	// prints character that is after ' ' (space) in the ASCII table.
 			if ((i & 0x1f) == 0x1f) owowod_print_string("\r\n");
 		}
