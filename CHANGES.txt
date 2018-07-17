@@ -7,6 +7,8 @@ Function owowod_delay renamed to owowod_bit_delay. Updated texts.
 
 Fixed small bug in the testing script. Updated texts.
 
+Updated texts.
+
 
 2016-07-30 (nb)
 
