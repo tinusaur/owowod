@@ -112,6 +112,22 @@ void owowod_print_numdecup(uint16_t num) {
 
 // ============================================================================
 
+void owowod_print_numhexupz(uint8_t num) {
+	char buffer[USINT2HEXASCII_MAX_DIGITS + 1];
+	buffer[USINT2HEXASCII_MAX_DIGITS] = '\0';   // Terminate the string.
+	usint2hexascii(num, buffer);
+	owowod_print_string(buffer + USINT2HEXASCII_MAX_DIGITS / 2);
+}
+
+void owowod_print_numhexuwpz(uint16_t num) {
+	char buffer[USINT2HEXASCII_MAX_DIGITS + 1];
+	buffer[USINT2HEXASCII_MAX_DIGITS] = '\0';   // Terminate the string.
+	usint2hexascii(num, buffer);
+	owowod_print_string(buffer);
+}
+
+// ============================================================================
+
 void owowod_print_numbinu(uint8_t num) {
 	char buffer[USINT2BINASCII_MAX_DIGITS + 1];
 	buffer[USINT2BINASCII_MAX_DIGITS] = '\0';   // Terminate the string.

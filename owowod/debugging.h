@@ -51,6 +51,17 @@
 	owowod_print_string("="); owowod_print_numdecu(val); \
 	owowod_print_string("; "); }
 
+#define DEBUGGING_NUMHEXUPZ(num) owowod_print_numhexupz(num)
+#define DEBUGGING_NUMHEXUWPZ(num) owowod_print_numhexuwpz(num)
+
+#define DEBUGGING_VARHEXUPZ(name, val) { owowod_print_string(name); \
+	owowod_print_string("="); owowod_print_numhexupz(val); \
+	owowod_print_string("; "); }
+
+#define DEBUGGING_VARHEXUWPZ(name, val) { owowod_print_string(name); \
+	owowod_print_string("="); owowod_print_numhexuwpz(val); \
+	owowod_print_string("; "); }
+
 #define DEBUGGING_NUMBINU(num) owowod_print_numbinu(num)
 #define DEBUGGING_NUMBINUPZ(num) owowod_print_numbinupz(num)
 #define DEBUGGING_NUMBINUW(num) owowod_print_numbinuw(num)
