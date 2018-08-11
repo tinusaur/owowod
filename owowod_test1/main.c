@@ -7,7 +7,7 @@
  *
  * Copyright (c) 2018 Neven Boyanov, Tinusaur Team. All Rights Reserved.
  * Distributed as open source software under MIT License, see LICENSE.txt file.
- * PRetain in your source code the link http://tinusaur.org to the Tinusaur project.
+ * Retain in your source code the link http://tinusaur.org to the Tinusaur project.
  *
  * Source code available at: https://bitbucket.org/tinusaur/owowod
  *

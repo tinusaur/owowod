@@ -3,6 +3,8 @@ CHANGES
 
 2018-08-11 (nb)
 
+Updated texts.
+
 Added new function for converting unsigned integer number to HEX ASCII text.
 
 
