@@ -1,0 +1,146 @@
+CHANGES
+
+
+2021-01-18 (nb)
+
+Files migrated from Bitbucket/Mercurial to GitLab/Git.
+
+
+2018-08-11 (nb)
+
+Updated texts.
+
+Added new function for converting unsigned integer number to HEX ASCII text.
+
+
+2018-07-17 (nb)
+
+Function owowod_delay renamed to owowod_bit_delay. Updated texts.
+
+Fixed small bug in the testing script. Updated texts.
+
+Updated texts.
+
+
+2016-07-30 (nb)
+
+Updated some texts.
+
+
+2016-05-07 (nb)
+
+Added new testing module for for different CPU frequencies and baud rates.
+
+
+2016-05-07 (nb)
+
+Improved testing scripts. Updated text files.
+
+
+2016-05-07 (nb)
+
+Improved the Makefile building script file for testing modules.
+
+
+2016-05-07 (nb)
+
+Source code reformatting; remove used num2str files; updated text, comments.
+
+- Source code reformatting.
+- Remove used num2str files.
+- Updated text, comments.
+
+
+2016-05-07 (nb)
+
+Added new DEBUGGING_VARBINUPZ, DEBUGGING_VARBINUWPZ functions.
+
+
+2016-04-29 (nb)
+
+Added new DEBUGGING_REINIT, SEROUT_REINIT functions. Renamed owowod_delay_set function to owowod_reinit. Renamed OWOWOD_DELAY_* to OWOWOD_BITLEN_*.
+
+- Added new DEBUGGING_REINIT, SEROUT_REINIT functions/macros.
+- Renamed owowod_delay_set function to owowod_reinit.
+- Renamed OWOWOD_DELAY_* to OWOWOD_BITLEN_*.
+
+
+2016-04-29 (nb)
+
+Updated texts, fixed typos. Other small changes.
+
+
+2016-04-22 (nb)
+
+Replaced while with for loop.
+
+The owowod_delay settable at run-time, default 1MHz/9600bps. Pre-defined constants for 1-8MHz and various bps's.
+
+Text changes, minor.
+
+
+2016-04-17 (nb)
+
+Added support for binary numbers. New SerOut module. Fixed building and texts.
+
+- Implemented, as part of the TinyAVRLib, new usint2binascii function to convert numbers to binary ASCII strings.
+- Added owowod_print_numbinu, owowod_print_numbinupz, owowod_print_numbinuw, owowod_print_numbinuwpz functions to work with binary number.
+- Added to "debugging" module support for binary numbers.
+- Added "serout" serial output module.
+- Edited, improved README file. Fixed typos in other files.
+- Updated OWOWOD_DELAY value.
+- Fixed Makefile files to work with the latest AVR-GCC SDKs.
+
+
+2015-09-26 (nb)
+
+Improved owowod_print_char: disabled interrupts while printing char. Added new DEBUGGING_CHAR function.
+
+- Improved owowod_print_char: disabled interrupts while printing char.
+- Added more info about working with higher BPS.
+- Added new convenience DEBUGGING_CHAR function.
+
+
+2015-03-03 (nb)
+
+Updated README, added licensing. Fixed some includes. Added new DEBUGGING_CRLF, DEBUGGING_STRINGLN functions.
+
+
+2015-02-24 (nb)
+
+Implemented handling signed integers. Changed existing functions to handle signed integers by default.
+
+- Changed owowod_print_numdec and owowod_print_numdecp to receive int16_t instead of uint16_t argument. Implemented handling of signed integer numbers.
+- Added new owowod_print_numdecu and owowod_print_numdecup for handling unsigned integer numbers.
+- Changed DEBUGGING_NUMDEC, DEBUGGING_NUMDECP, DEBUGGING_VAR to receive signed numbers.
+- Added new DEBUGGING_NUMDECU, DEBUGGING_NUMDECUP, DEBUGGING_VARU for handling unsigned integer numbers.
+- Updated README file.
+- Updated testing scripts to reflect latest implementations in the library.
+
+
+2015-02-08 (nb)
+
+Improved testing and demo source code. Added new debugging print macros. Updated external libraries.
+
+- Added new DEBUGGING_NUMDEC, DEBUGGING_ERROR, DEBUGGING_VAR macros.
+- Updated testing code to demonstrate better the library capabilities.
+- Updated copyright info, added license.
+- Updated README and other texts.
+- Source code reformatting, updated and fixed comments.
+- Updated the external NUM2STR library to its latest version.
+
+
+2015-01-01 (nb)
+
+Added new "debugging.h" file with handy debugging definitions. Updated text file, source code and comment reformatting.
+
+- Added new "debugging.h" file with handy debugging definitions.
+- Updated text files.
+- Minor code and comment reformatting.
+
+
+2014-12-18 (nb)
+
+Files added to the repository.
+
+
