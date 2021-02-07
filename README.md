@@ -20,11 +20,16 @@ NOTE: This project was developed and tested the ATtiny85 microcontrollers. It mi
 -------------------------------------------------------------------------------
 
 Folders and modules:
-- owowod            - The library source code
-- owowod_test1      - Testing scripts for the library
-- owowod_test2      - Testing scripts for the "debugging" functions.
-- owowod_test3      - Testing scripts for the "serout" functions.
-- owowod_test4      - Testing scripts for different CPU frequencies and baud rates.
+
+- owowod			- The library source code files.
+- owowod_cpufreq1	- Testing scripts for different CPU frequencies and baud rates.
+- owowod_debug1		- Testing scripts for the "debugging" functions.
+- owowod_legacy		- Some legacy files, wil be removed.
+- owowod_numbin1	- Testing scripts for the library - Binary numers
+- owowod_numdec1	- Testing scripts for the library - Decimal numbers
+- owowod_numhex1	- Testing scripts for the library - Hexadecimal numbers
+- owowod_serout1	- Testing scripts for the "serout" functions.
+- owowod_test1		- Testing scripts for the library.
 
 -------------------------------------------------------------------------------
 
