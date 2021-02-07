@@ -1,24 +1,21 @@
 /**
- * OWOWOD - One Wire / One Way Output for Debugging
- *
+ * OWOWOD - One-Wire/One-Way Output for Debugging
  * @author Neven Boyanov
- *
  * This is part of the Tinusaur/OWOWOD project.
- *
- * Copyright (c) 2018 Neven Boyanov, Tinusaur Team. All Rights Reserved.
- * Distributed as open source software under MIT License, see LICENSE.txt file.
- * Retain in your source code the link http://tinusaur.org to the Tinusaur project.
- *
- * Source code available at: https://bitbucket.org/tinusaur/owowod
- *
+ * ----------------------------------------------------------------------------
+ *  Copyright (c) 2021 Tinusaur (https://tinusaur.com). All rights reserved.
+ *  Distributed as open source under the MIT License (see the LICENSE.txt file)
+ *  Please, retain in your work a link to the Tinusaur project website.
+ * ----------------------------------------------------------------------------
+ * Source code available at: https://gitlab.com/tinusaur/owowod
  */
 
-// ----------------------------------------------------------------------------
+// ============================================================================
 
 #ifndef SEROUT_H
 #define SEROUT_H
 
-// ============================================================================
+// ----------------------------------------------------------------------------
 
 #include "owowod.h"
 
@@ -42,6 +39,8 @@
 #define SEROUT_NUMBINUW(num) owowod_print_numbinuw(num)
 #define SEROUT_NUMBINUWPZ(num) owowod_print_numbinuwpz(num)
 
-// ============================================================================
+// ----------------------------------------------------------------------------
 
 #endif
+
+// ============================================================================

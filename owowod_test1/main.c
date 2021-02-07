@@ -1,57 +1,39 @@
 /**
- * OWOWOD - One Wire / One Way Output for Debugging
- *
+ * OWOWOD - One-Wire/One-Way Output for Debugging
  * @author Neven Boyanov
- *
  * This is part of the Tinusaur/OWOWOD project.
- *
- * Copyright (c) 2018 Neven Boyanov, Tinusaur Team. All Rights Reserved.
- * Distributed as open source software under MIT License, see LICENSE.txt file.
- * Retain in your source code the link http://tinusaur.org to the Tinusaur project.
- *
- * Source code available at: https://bitbucket.org/tinusaur/owowod
- *
+ * ----------------------------------------------------------------------------
+ *  Copyright (c) 2021 Tinusaur (https://tinusaur.com). All rights reserved.
+ *  Distributed as open source under the MIT License (see the LICENSE.txt file)
+ *  Please, retain in your work a link to the Tinusaur project website.
+ * ----------------------------------------------------------------------------
+ * Source code available at: https://gitlab.com/tinusaur/owowod
  */
-
-// ============================================================================
-
-// #define F_CPU 1000000UL
-// NOTE: The F_CPU (CPU frequency) should not be defined in the source code.
-//       It should be defined in either (1) Makefile; or (2) in the IDE. 
 
 #include <stdlib.h>
 #include <avr/io.h>
 #include <util/delay.h>
 
-// Change the OWOWOD port, if necessary.
-// #define OWOWOD_PORT	PB3	// OWOWOD port
-
 #include "owowod/owowod.h"
 
-//
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//                 ATtiny
-//                25/45/85
-//              +----------+
-//      (RST)---+ PB5  Vcc +---(+)-------
-// --[OWOWOD]---+ PB3  PB2 +---
-//           ---+ PB4  PB1 +---
-// -------(-)---+ GND  PB0 +---
-//              +----------+
-//
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//
-
-// ----------------------------------------------------------------------------
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//                  ATtiny85
+//                +----------+    (-)--GND--
+//       (RST)--> + PB5  Vcc +----(+)--VCC--
+//   [OWOWOD]--<--+ PB3  PB2 +--------------
+//  --------------+ PB4  PB1 +--------------
+//  --GND--(-)----+ GND  PB0 +--------------
+//                +----------+
+//                  Tinusaur
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 int main(void) {
-
-	// ---- Initialization ----
+	// ---- Init ----
 	owowod_init();
 
 	// ---- Main Loop ----
 	uint8_t num = 0;
-	for (;;) {
+	for (;;) { // The infinite main loop
 
 		owowod_print_char('A');
 		owowod_print_string("\r\n");
@@ -97,7 +79,7 @@ int main(void) {
 		num++;
 	}
 
-	return 0;
+	return 0; // Return the mandatory for the "main" function int value - "0" for success.
 }
 
 // ============================================================================

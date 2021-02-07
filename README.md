@@ -9,11 +9,11 @@ OWOWOD is a small library that allows you to create a one-wire, one-way debuggin
     Please, retain in your work a link to the Tinusaur project website.
 
 - OWOWOD source code:   https://gitlab.com/tinusaur/owowod
-- OWOWOD project page:  http://tinusaur.org/projects/owowod/
+- OWOWOD project page:  https://tinusaur.org/projects/owowod/
 
 NOTE: This project was developed and tested the ATtiny85 microcontrollers. It might or might not work in other environments.
 
-- Tinusaur website: http://tinusaur.org
+- Tinusaur website: https://tinusaur.org
 - Tinusaur on Twitter: https://twitter.com/tinusaur
 - Tinusaur on Facebook: https://www.facebook.com/tinusaur
 
