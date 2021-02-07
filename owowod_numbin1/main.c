@@ -35,13 +35,23 @@ int main(void) {
 	for (;;) { // The infinite main loop
 		owowod_print_string("Hello!\r\n");
 
-		owowod_print_string("A="); owowod_print_numhexupz(1); owowod_print_string("\r\n");
-		owowod_print_string("B="); owowod_print_numhexupz(234); owowod_print_string("\r\n");
-		owowod_print_string("C="); owowod_print_numhexupz(-56); owowod_print_string("\r\n");
+		owowod_print_string("A="); owowod_print_numbinu(1); owowod_print_string("\r\n");
+		owowod_print_string("B="); owowod_print_numbinu(234); owowod_print_string("\r\n");
+		owowod_print_string("C="); owowod_print_numbinu(-56); owowod_print_string("\r\n");
 
-		owowod_print_string("D="); owowod_print_numhexuwpz(1234); owowod_print_string("\r\n");
-		owowod_print_string("E="); owowod_print_numhexuwpz(56789); owowod_print_string("\r\n");
-		owowod_print_string("F="); owowod_print_numhexuwpz(-12345); owowod_print_string("\r\n");
+		owowod_print_string("D="); owowod_print_numbinupz(1); owowod_print_string("\r\n");
+		owowod_print_string("E="); owowod_print_numbinupz(234); owowod_print_string("\r\n");
+		owowod_print_string("F="); owowod_print_numbinupz(-56); owowod_print_string("\r\n");
+
+		owowod_print_string("G="); owowod_print_numbinuw(1); owowod_print_string("\r\n");
+		owowod_print_string("H="); owowod_print_numbinuw(234); owowod_print_string("\r\n");
+		owowod_print_string("I="); owowod_print_numbinuw(56789); owowod_print_string("\r\n");
+		owowod_print_string("J="); owowod_print_numbinuw(-12345); owowod_print_string("\r\n");
+
+		owowod_print_string("K="); owowod_print_numbinuwpz(1); owowod_print_string("\r\n");
+		owowod_print_string("L="); owowod_print_numbinuwpz(234); owowod_print_string("\r\n");
+		owowod_print_string("M="); owowod_print_numbinuwpz(56789); owowod_print_string("\r\n");
+		owowod_print_string("N="); owowod_print_numbinuwpz(-12345); owowod_print_string("\r\n");
 
 		owowod_print_string("\r\n--------[Good-bye!]--------\r\n\r\n");
 		_delay_ms(2000);
