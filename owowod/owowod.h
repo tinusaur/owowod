@@ -68,7 +68,7 @@ void owowod_print_numdecup(uint16_t);
 // ----------------------------------------------------------------------------
 
 void owowod_print_numhexupz(uint8_t);
-void owowod_print_numhexuwpz(uint16_t num);
+void owowod_print_numhexuwpz(uint16_t);
 
 // ----------------------------------------------------------------------------
 
