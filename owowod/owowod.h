@@ -40,7 +40,7 @@
 #define OWOWOD_BITLEN_FCPU8MHZ_019200BPS	67	// 65-70: OK
 #define OWOWOD_BITLEN_FCPU8MHZ_038400BPS	33	// 32-34: OK
 #define OWOWOD_BITLEN_FCPU8MHZ_057600BPS	21	// 20-22: OK
-#define OWOWOD_BITLEN_FCPU8MHZ_115200BPS	9	// 9: OK, 10: Errors
+#define OWOWOD_BITLEN_FCPU8MHZ_115200BPS	10	// 9-10: OK (but not always)
 
 // NOTE: In some cased the numbers above may need to be adjusted by +/- 1 or 2
 //       if the CPU clock is not calibrated to exactly 1 MHz or 8 MHz.
