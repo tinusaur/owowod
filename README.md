@@ -8,7 +8,8 @@ OWOWOD is a small library that allows you to create a one-wire, one-way debuggin
     Distributed as open source under the MIT License (see the LICENSE.txt file).
     Please, retain in your work a link to the Tinusaur project website.
 
-- OWOWOD source code:   https://gitlab.com/tinusaur/owowod
+- OWOWOD source code:   https://gitlab.com/tinusaur/owowod  
+  GitHub mirror at: https://github.com/tinusaur/owowod
 - OWOWOD project page:  https://tinusaur.org/projects/owowod/
 
 NOTE: This project was developed and tested the ATtiny85 microcontrollers. It might or might not work in other environments.
