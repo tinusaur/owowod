@@ -32,25 +32,21 @@ Folders and modules:
 - owowod_serout1	- Testing scripts for the "serout" functions.
 - owowod_test1		- Testing scripts for the library.
 
--------------------------------------------------------------------------------
-
 ## How does it works?
 
 One example would be printing debugging information from a microcontroller to a developer machine, i.e. your laptop. That will work like this:
 - The library will output the debugging text using just one wire, let's say via PB3 pin.
 - A USB-to-Serial (TTL) converter receives that signal via its RX pin and passes this to the computer.
-- A COM port monitoring program or terminal (such as RealTerm) will show the debugging text on the screen of the computer.
+- A COM port monitoring program or terminal (such as RealTerm - links below) will show the debugging text on the screen of the computer.
 
 ![Tinusaur OWOWOD Library Diagram](/media/Tinusaur-OWOWOD-Diagram.png "Tinusaur OWOWOD Library Diagram")*Tinusaur OWOWOD Library Diagram*
-
-
--------------------------------------------------------------------------------
 
 ## Compatibility
 
 - MCU: This library was developed and tested with the following microcontrollers: ATtiny85, ATtiny45, ATtiny25.
-- CPU FREQUENCY: This library has support and was tested work at 1 MHz and 8 MHz CPU clock mode.
-- SERIAL: This library was tested to work with following USB-to-Serial chips: CH340G, PL2303.
+- CPU FREQUENCY: This library supports and was tested to work at 1 MHz and 8 MHz CPU Clock mode.
+- SERIAL MODULE: This library was tested to work with following USB-to-Serial modules: CH340G, PL2303.
 
--------------------------------------------------------------------------------
+## Additional Resources
 
+Realterm Development Version Downloads: https://realterm.i2cchip.com
