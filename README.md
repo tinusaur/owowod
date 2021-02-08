@@ -40,6 +40,9 @@ One example would be printing debugging information from a microcontroller to a 
 - A USB-to-Serial (TTL) converter receives that signal via its RX pin and passes this to the computer.
 - A COM port monitoring program or terminal (such as RealTerm) will show the debugging text on the screen of the computer.
 
+![Tinusaur OWOWOD Library Diagram](/media/Tinusaur-OWOWOD-Diagram.png "Tinusaur OWOWOD Library Diagram")*Tinusaur OWOWOD Library Diagram*
+
+
 -------------------------------------------------------------------------------
 
 ## Compatibility
