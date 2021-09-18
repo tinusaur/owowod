@@ -1,16 +1,13 @@
 /**
- * OWOWOD - One Wire / One Way Output for Debugging
- *
+ * OWOWOD - One-Wire/One-Way Output for Debugging
  * @author Neven Boyanov
- *
  * This is part of the Tinusaur/OWOWOD project.
- *
- * Copyright (c) 2018 Neven Boyanov, Tinusaur Team. All Rights Reserved.
- * Distributed as open source software under MIT License, see LICENSE.txt file.
- * Retain in your source code the link http://tinusaur.org to the Tinusaur project.
- *
- * Source code available at: https://bitbucket.org/tinusaur/owowod
- *
+ * ----------------------------------------------------------------------------
+ *  Copyright (c) 2021 Tinusaur (https://tinusaur.com). All rights reserved.
+ *  Distributed as open source under the MIT License (see the LICENSE.txt file)
+ *  Please, retain in your work a link to the Tinusaur project website.
+ * ----------------------------------------------------------------------------
+ * Source code available at: https://gitlab.com/tinusaur/owowod
  */
 
 // ============================================================================
@@ -43,7 +40,7 @@
 #define OWOWOD_BITLEN_FCPU8MHZ_019200BPS	67	// 65-70: OK
 #define OWOWOD_BITLEN_FCPU8MHZ_038400BPS	33	// 32-34: OK
 #define OWOWOD_BITLEN_FCPU8MHZ_057600BPS	21	// 20-22: OK
-#define OWOWOD_BITLEN_FCPU8MHZ_115200BPS	9	// 9: OK, 10: Errors
+#define OWOWOD_BITLEN_FCPU8MHZ_115200BPS	10	// 9-10: OK (but not always)
 
 // NOTE: In some cased the numbers above may need to be adjusted by +/- 1 or 2
 //       if the CPU clock is not calibrated to exactly 1 MHz or 8 MHz.
@@ -71,7 +68,7 @@ void owowod_print_numdecup(uint16_t);
 // ----------------------------------------------------------------------------
 
 void owowod_print_numhexupz(uint8_t);
-void owowod_print_numhexuwpz(uint16_t num);
+void owowod_print_numhexuwpz(uint16_t);
 
 // ----------------------------------------------------------------------------
 
@@ -80,6 +77,8 @@ void owowod_print_numbinupz(uint8_t);
 void owowod_print_numbinuw(uint16_t);
 void owowod_print_numbinuwpz(uint16_t);
 
-// ============================================================================
+// ----------------------------------------------------------------------------
 
 #endif
+
+// ============================================================================

@@ -15,6 +15,7 @@
 #include <util/delay.h>
 
 #include "owowod/owowod.h"
+#include "owowod/serout.h"
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //                  ATtiny85
@@ -29,26 +30,39 @@
 
 int main(void) {
 	// ---- Init ----
-	owowod_init();
+	SEROUT_INIT();
 
 	// ---- Main Loop ----
-	for (;;) { // The infinite main loop
-		owowod_print_char(':');
-		owowod_print_char(')');
-		owowod_print_char(' ');
-		owowod_print_string("Hello!");
-		owowod_print_char(0x20);	// 0x20=' '
-		owowod_print_char(0x55);	// 0x55='U'
-		owowod_print_char(0xAA);	// 0xAA='ª'
-		owowod_print_string("\r\n");
-		for (uint8_t i = 32; i <= 32 + 26; i++) {
-			owowod_print_char(' ' + i);	// prints character that is after ' ' (space) in the ASCII table.
-		}
-		owowod_print_string("\r\n--------[Good-bye!]--------\r\n\r\n");
+	for (;;) {
+		SEROUT_CHAR(':');
+		SEROUT_CHAR(')');
+		SEROUT_CHAR(0x20);
+		SEROUT_STRING("HELLO!");
+		SEROUT_CRLF();
+
+		for (char ch = 'A'; ch <= 'Z'; ch++) SEROUT_CHAR(ch);
+		SEROUT_CRLF();
+
+		SEROUT_STRINGLN("----NUMDEC----");
+		SEROUT_NUMDEC(123); SEROUT_CRLF();
+		SEROUT_NUMDEC(-123); SEROUT_CRLF();
+		SEROUT_NUMDECP(4567); SEROUT_CRLF();
+		SEROUT_NUMDECP(-4567); SEROUT_CRLF();
+		SEROUT_NUMDECU(123); SEROUT_CRLF();
+		SEROUT_NUMDECUP(4567); SEROUT_CRLF();
+
+		SEROUT_STRINGLN("----NUMBIN----");
+		SEROUT_NUMBINU(0x12); SEROUT_CRLF();
+		SEROUT_NUMBINUPZ(0x34); SEROUT_CRLF();
+		SEROUT_NUMBINUW(0x1234); SEROUT_CRLF();
+		SEROUT_NUMBINUWPZ(0x5678); SEROUT_CRLF();
+
+		SEROUT_STRINGLN("--------[Good-bye!]--------");
+		SEROUT_CRLF();
 		_delay_ms(2000);
 	}
 
-	return 0; // Return the mandatory for the "main" function int value - "0" for success.
+	return 0;
 }
 
 // ============================================================================

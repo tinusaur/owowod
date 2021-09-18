@@ -33,17 +33,26 @@ int main(void) {
 
 	// ---- Main Loop ----
 	for (;;) { // The infinite main loop
-		owowod_print_char(':');
-		owowod_print_char(')');
-		owowod_print_char(' ');
-		owowod_print_string("Hello!");
-		owowod_print_char(0x20);	// 0x20=' '
-		owowod_print_char(0x55);	// 0x55='U'
-		owowod_print_char(0xAA);	// 0xAA='ª'
-		owowod_print_string("\r\n");
-		for (uint8_t i = 32; i <= 32 + 26; i++) {
-			owowod_print_char(' ' + i);	// prints character that is after ' ' (space) in the ASCII table.
-		}
+		owowod_print_string("Hello!\r\n");
+
+		owowod_print_string("A="); owowod_print_numbinu(1); owowod_print_string("\r\n");
+		owowod_print_string("B="); owowod_print_numbinu(234); owowod_print_string("\r\n");
+		owowod_print_string("C="); owowod_print_numbinu(-56); owowod_print_string("\r\n");
+
+		owowod_print_string("D="); owowod_print_numbinupz(1); owowod_print_string("\r\n");
+		owowod_print_string("E="); owowod_print_numbinupz(234); owowod_print_string("\r\n");
+		owowod_print_string("F="); owowod_print_numbinupz(-56); owowod_print_string("\r\n");
+
+		owowod_print_string("G="); owowod_print_numbinuw(1); owowod_print_string("\r\n");
+		owowod_print_string("H="); owowod_print_numbinuw(234); owowod_print_string("\r\n");
+		owowod_print_string("I="); owowod_print_numbinuw(56789); owowod_print_string("\r\n");
+		owowod_print_string("J="); owowod_print_numbinuw(-12345); owowod_print_string("\r\n");
+
+		owowod_print_string("K="); owowod_print_numbinuwpz(1); owowod_print_string("\r\n");
+		owowod_print_string("L="); owowod_print_numbinuwpz(234); owowod_print_string("\r\n");
+		owowod_print_string("M="); owowod_print_numbinuwpz(56789); owowod_print_string("\r\n");
+		owowod_print_string("N="); owowod_print_numbinuwpz(-12345); owowod_print_string("\r\n");
+
 		owowod_print_string("\r\n--------[Good-bye!]--------\r\n\r\n");
 		_delay_ms(2000);
 	}
