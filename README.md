@@ -2,7 +2,7 @@
 
 OWOWOD - One-Wire/One-Way Output for Debugging
 
-OWOWOD is a small library that allows you to create a one-wire, one-way debugging/printing connection from ATtiny85 to another device, such as a computer, using standard serial protocol. This library is written in plain C.
+OWOWOD is a small C library that allows you to create a one-wire, one-way debugging/printing connection from ATtiny85 to another device, such as a computer, using standard serial protocol. This library is written in plain C.
 
     Copyright (c) 2021 Tinusaur (https://tinusaur.com). All rights reserved.
     Distributed as open source under the MIT License (see the LICENSE.txt file).
@@ -10,9 +10,9 @@ OWOWOD is a small library that allows you to create a one-wire, one-way debuggin
 
 - OWOWOD source code:   https://gitlab.com/tinusaur/owowod  
   GitHub mirror at: https://github.com/tinusaur/owowod
-- OWOWOD project page:  https://tinusaur.org/projects/owowod/
+- OWOWOD project page:  https://tinusaur.org/projects/owowod
 
-NOTE: This project was developed and tested the ATtiny85 microcontrollers. It might or might not work in other environments.
+NOTE: This project was developed for and tested on the ATtiny85 microcontrollers. It might or might not work in other environments.
 
 - Tinusaur website: https://tinusaur.org
 - Tinusaur on Twitter: https://twitter.com/tinusaur

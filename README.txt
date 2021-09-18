@@ -9,7 +9,7 @@ OWOWOD - One-Wire/One-Way Output for Debugging
 OWOWOD source code:   https://gitlab.com/tinusaur/owowod
 OWOWOD project page:  https://tinusaur.org/projects/owowod/
 
-NOTE: This project was developed and tested the ATtiny85 microcontrollers.
+NOTE: This project was developed for and tested on the ATtiny85 microcontrollers.
       It might or might not work in other environments.
 
 Tinusaur website: https://tinusaur.org
