@@ -3,7 +3,7 @@
  * @author Neven Boyanov
  * This is part of the Tinusaur/OWOWOD project.
  * ----------------------------------------------------------------------------
- *  Copyright (c) 2021 Tinusaur (https://tinusaur.com). All rights reserved.
+ *  Copyright (c) 2022 Tinusaur (https://tinusaur.com). All rights reserved.
  *  Distributed as open source under the MIT License (see the LICENSE.txt file)
  *  Please, retain in your work a link to the Tinusaur project website.
  * ----------------------------------------------------------------------------
@@ -33,10 +33,10 @@ int main(void) {
 
 	// ---- Main Loop ----
 	for (;;) { // The infinite main loop
-		owowod_print_char(':');
-		owowod_print_char(')');
+		owowod_print_char('#');
+		owowod_print_char('>');
 		owowod_print_char(' ');
-		owowod_print_string("Hello!");
+		owowod_print_string("Hello, World!");
 		owowod_print_char(0x20);	// 0x20=' '
 		owowod_print_char(0x55);	// 0x55='U'
 		owowod_print_char(0xAA);	// 0xAA='ª'
@@ -44,7 +44,8 @@ int main(void) {
 		for (uint8_t i = 32; i <= 32 + 26; i++) {
 			owowod_print_char(' ' + i);	// prints character that is after ' ' (space) in the ASCII table.
 		}
-		owowod_print_string("\r\n--------[Good-bye!]--------\r\n\r\n");
+		owowod_print_string("\r\n");
+		owowod_print_string("Good-bye!\r\n\r\n");
 		_delay_ms(2000);
 	}
 

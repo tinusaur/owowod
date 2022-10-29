@@ -39,9 +39,6 @@ inline void owowod_bit_delay(void) {
 // ----------------------------------------------------------------------------
 
 void owowod_print_char(char c) {
-	cli(); // disable interrupts
-	// TODO: make it optional, use define.
-
 	PORTB &= ~(1 << OWOWOD_PORT);	// Set to LO
 	owowod_bit_delay();
 	for (uint8_t i = 0; i < 8; i++)
@@ -56,10 +53,10 @@ void owowod_print_char(char c) {
 	}
 	PORTB |= (1 << OWOWOD_PORT);	// Set to HI
 	owowod_bit_delay();
-
-	sei(); // enable interrupts
-	// TODO: make it optional, use define.
 }
+
+// NOTE about cli() and sei() - DO NOT put them here!
+// The sei() might enable interrupts within an interrupt.
 
 void owowod_print_string(char *s) {
 	while (*s) {

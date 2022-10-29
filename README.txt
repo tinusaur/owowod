@@ -1,7 +1,7 @@
 OWOWOD - One-Wire/One-Way Output for Debugging
 
 -------------------------------------------------------------------------------
- Copyright (c) 2021 Tinusaur (https://tinusaur.com). All rights reserved.
+ Copyright (c) 2022 Tinusaur (https://tinusaur.com). All rights reserved.
  Distributed as open source under the MIT License (see the LICENSE.txt file).
  Please, retain in your work a link to the Tinusaur project website.
 -------------------------------------------------------------------------------
